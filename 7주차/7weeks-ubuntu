@@ -1,0 +1,22 @@
+man wget
+
+    -q        진행 상황 등을 출력하지 않음
+    -o        <file> file에 저장
+    -r        링크를 재귀적으로 돌며 다운로드
+    -l        재쥐적으로 다운로드할 때 링크의 순회 깊이를 depth 만큼 제한
+    -w        재귀적으로 다운로드할 때 다운로드 간격을 seconds 초로 지정
+    -np       재귀적으로 다운로드할 때 부모 디렉토리는 크롤링하지 않음
+    --restrict-file-names=nocontrol    URL에 한국어 등이 포함되어 있을 경우 한국어 파일명으로 저장 
+   
+   
+wget -r -np -w 1 -l 1 --restrict-file-names=nocontrol http://www.hanbit.co.kr/
+
+
+
+명령어 > 경로  : 명령어 실행 결과(표준출력)을 파일에 저장
+
+파이프 |       : 어떤 명령어의 표준 풀력을 다른 명령어의 표준 입력으로 전달
+
+
+
+echo '1, jeon, 26, man' | cut -d,-f #1~4
